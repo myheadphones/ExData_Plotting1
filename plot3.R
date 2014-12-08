@@ -9,11 +9,11 @@ power3$DateTime <- as.POSIXct(paste(power3$Date, power3$Time),"%d/%m/%Y %H:%M:%S
 par(mfcol = c(1,1))
 
 # plot it
-plot(power3$DateTime,power3$Sub_metering_1, ylab="Energy Sub metering", xlab="", type="l", cex.axis=0.8)
+png("plot3.png",width = 480, height = 480)
+plot(power3$DateTime,power3$Sub_metering_1, ylab="Energy sub metering", xlab="", type="l")
 lines(power3$DateTime, power3$Sub_metering_2, col="red")
 lines(power3$DateTime, power3$Sub_metering_3, col="blue")
 legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col=c("Black","Red","Blue"), lty="solid")
 
 # Save the plot
-dev.print(device = png, width = 480, height = 480, filename = "plot3.png")
 dev.off()

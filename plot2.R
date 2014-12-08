@@ -9,8 +9,8 @@ power3$DateTime <- as.POSIXct(paste(power3$Date, power3$Time),"%d/%m/%Y %H:%M:%S
 par(mfcol = c(1,1))
 
 # plot it
+png("plot2.png",width = 480, height = 480)
 plot(power3$DateTime,power3$Global_active_power, ylab="Global Active Power (kilowatts)", xlab="", type="l")
 
 # Save the plot
-dev.print(device = png, width = 480, height = 480, filename = "plot2.png")
 dev.off()
