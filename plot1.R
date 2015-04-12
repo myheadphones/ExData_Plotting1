@@ -1,3 +1,4 @@
+#
 # read in the data
 power <- read.csv("household_power_consumption.txt", sep=";", na.strings = "?")
 power2 <- tbl_df(power)
